@@ -29,7 +29,7 @@ if __name__ == '__main__':
     yes = 0
     total = 1
     
-    for i in range(1, 100):
+    for i in range(1, TOTAL_SIMULATIONS+1):
         teams = team_constructor(teams_dict=teams_dict)
         matches_dict = matches_dict_constructor(teams_dict=teams_dict)
         matches = match_constructor(matches_dict=matches_dict)
@@ -44,14 +44,14 @@ if __name__ == '__main__':
                 run_future_match(match=match, home=home, away=away)
         
         teams.sort(key=lambda x: x.points)
-        internacional = None
+        fortaleza = None
         for index, team in enumerate(teams):
-            if team.name == 'INTERNACIONAL' and index <= 3:
+            if team.name == 'FORTALEZA EC SAF' and index <= 3:
                 yes += 1
-                print(f"Simulação de nº{total}, INTERNACIONAL foi rebaixado {yes} vezes. Nesta simulacao ficou em {20-index}º")
-            elif team.name == 'INTERNACIONAL':
-                print(f"Simulação de nº{total}, INTERNACIONAL foi rebaixado {yes} vezes. Nesta simulacao ficou em {20-index}º")            
+                print(f"Simulação de nº{total}, FORTALEZA foi rebaixado {yes} vezes. Nesta simulacao ficou em {20-index}º")
+            elif team.name == 'FORTALEZA EC SAF':
+                print(f"Simulação de nº{total}, FORTALEZA foi rebaixado {yes} vezes. Nesta simulacao ficou em {20-index}º")            
         total += 1
 
     
-    print(f"A probabilidade do internacional ser rebaixado é {yes}/{total} = {yes/total}")
+    print(f"A probabilidade do fortaleza ser rebaixado é {yes}/{total} = {yes/total}")
