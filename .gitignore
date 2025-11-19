@@ -1,0 +1,21 @@
+# Virtualenv
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+
+# VSCode / IDEs
+.vscode/
+.idea/
+*.swp
+
+# MacOS
+.DS_Store
+
+# PDF
+n48_n49_Artigo02.pdf
